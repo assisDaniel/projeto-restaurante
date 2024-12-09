@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Personal Project</title>
+  <title>Projeto Pessoal</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -44,17 +44,17 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-end justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-phone d-flex align-items-center d-none d-lg-block"><span>+1 5589 55488 55</span></i>
-          <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sat: 11:00 AM - 23:00 PM</span></i>
+          <i class="bi bi-phone d-flex align-items-center d-none d-lg-block"><span>+55 (63) 90000 0000</span></i>
+          <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Seg-Sab: 09:00 - 19:00</span></i>
         </div>
-        <a href="#book-a-table" class="cta-btn">Book a table</a>
+        <a href="#reserve-uma-mesa" class="cta-btn">Reserve uma mesa</a>
       </div>
     </div><!-- End Top Bar -->
 
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="{% url 'home' %}" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
           <h1 class="sitename">Delicious</h1>
@@ -63,13 +63,13 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#chefs">Chefs</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#especiais">Especiais</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#chefes">Chefes</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Dropdown 1</a></li>
                 <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -85,8 +85,8 @@
                 <li><a href="#">Dropdown 3</a></li>
                 <li><a href="#">Dropdown 4</a></li>
               </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
+            </li> -->
+            <li><a href="#contatos">Contatos</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -110,8 +110,8 @@
             <h2><span>Delicious</span> Restaurant</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div>
-              <a href="#menu" class="btn-get-started">Our Menu</a>
-              <a href="#book-a-table" class="btn-get-started">Book a table</a>
+              <a href="#cardapio" class="btn-get-started">Nosso Cardápio</a>
+              <a href="#reserve-uma-mesa" class="btn-get-started">Reserve uma mesa</a>
             </div>
           </div>
         </div><!-- End Carousel Item -->
@@ -122,8 +122,8 @@
             <h2>At vero eos et accusamus</h2>
             <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
             <div>
-              <a href="#menu" class="btn-get-started">Our Menu</a>
-              <a href="#book-a-table" class="btn-get-started">Book a table</a>
+              <a href="#cardapio" class="btn-get-started">Nosso cardápio</a>
+              <a href="#reserve-uma-mesa" class="btn-get-started">Reserve uma mesa</a>
             </div>
           </div>
         </div><!-- End Carousel Item -->
@@ -134,8 +134,8 @@
             <h2>Temporibus autem quibusdam</h2>
             <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
             <div>
-              <a href="#menu" class="btn-get-started">Our Menu</a>
-              <a href="#book-a-table" class="btn-get-started">Book a table</a>
+              <a href="#cardapio" class="btn-get-started">Nosso cardápio</a>
+              <a href="#reserve-uma-mesa" class="btn-get-started">Reserve uma mesa</a>
             </div>
           </div>
         </div><!-- End Carousel Item -->
@@ -155,7 +155,7 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section light-background">
+    <section id="sobre" class="about section light-background">
 
       <div class="container">
 
@@ -191,8 +191,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Why Us</h2>
-        <div><span>Why choose</span> <span class="description-title">Our Restaurant</span></div>
+        <h2>Por que nós?</h2>
+        <div><span>Por que escolher</span> <span class="description-title">Nosso Restaurante</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -230,12 +230,12 @@
     </section><!-- /Why Us Section -->
 
     <!-- Menu Section -->
-    <section id="menu" class="menu section">
+    <section id="cardapio" class="menu section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Menu</h2>
-        <div><span>Check Our Tasty</span> <span class="description-title">Menu</span></div>
+        <h2>Cardápio</h2>
+        <div><span>Confira Nosso Delicioso</span> <span class="description-title">Cardápio</span></div>
       </div><!-- End Section Title -->
 
       <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
@@ -350,12 +350,12 @@
     </section><!-- /Menu Section -->
 
     <!-- Specials Section -->
-    <section id="specials" class="specials section">
+    <section id="especiais" class="specials section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Specials</h2>
-        <div><span>Check Our</span> <span class="description-title">Specials</span></div>
+        <h2>Especiais</h2>
+        <div><span>Confira nossos</span> <span class="description-title">Especiais</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -364,19 +364,19 @@
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Modi sit est</a>
+                <a class="nav-link active show" data-bs-toggle="tab" href="#especiais-tab-1">Modi sit est</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Unde praesentium sed</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#especiais-tab-2">Unde praesentium sed</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Pariatur explicabo vel</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#especiais-tab-3">Pariatur explicabo vel</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">Nostrum qui quasi</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#especiais-tab-4">Nostrum qui quasi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Iusto ut expedita aut</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#especiais-tab-5">Iusto ut expedita aut</a>
               </li>
             </ul>
           </div>
@@ -451,7 +451,7 @@
     </section><!-- /Specials Section -->
 
     <!-- Events Section -->
-    <section id="events" class="events section">
+    <section id="eventos" class="events section">
 
       <img class="slider-bg" src="{% static 'img/events-bg.jpg' %}" alt="" data-aos="fade-in">
 
@@ -565,12 +565,12 @@
     </section><!-- /Events Section -->
 
     <!-- Book A Table Section -->
-    <section id="book-a-table" class="book-a-table section">
+    <section id="reserve-uma-mesa" class="book-a-table section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Book A Table</h2>
-        <div><span>Book a</span> <span class="description-title">Table</span></div>
+        <h2>Reserve Uma Mesa</h2>
+        <div><span>Reserve uma</span> <span class="description-title">Mesa</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -622,12 +622,12 @@
     </section><!-- /Book A Table Section -->
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+    <section id="galeria" class="gallery section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <div><span>Some photos from</span> <span class="description-title">Our Restaurant</span></div>
+        <h2>Galeria</h2>
+        <div><span>Algumas fotos do</span> <span class="description-title">Nosso Restaurante</span></div>
       </div><!-- End Section Title -->
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
@@ -705,12 +705,12 @@
     </section><!-- /Gallery Section -->
 
     <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
+    <section id="chefes" class="chefs section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Chefs</h2>
-        <div><span>Our Professional</span> <span class="description-title">Chefs</span></div>
+        <h2>Chefes</h2>
+        <div><span>Nossos</span> <span class="description-title">Chefes</span> <span>Profissionais</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -885,16 +885,16 @@
     </section><!-- /Testimonials Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="contatos" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <div><span>Check Our</span> <span class="description-title">Contact</span></div>
+        <h2>Contatos</h2>
+        <div><span>Confira Nossos</span> <span class="description-title">Contatos</span></div>
       </div><!-- End Section Title -->
 
       <div class="mb-5">
-        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7853.843812682287!2d-48.3352869!3d-10.1869974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9324cb43e0ce5b85%3A0x4ac32dd0236fe5e!2zUHJhw6dhIGRvcyBHaXJhc3PDs2lz!5e0!3m2!1spt-BR!2sbr!4v1733752640901!5m2!1spt-BR!2sbr" width="100%" height="400" frameborder="0" allowfullscreen=""></iframe>
       </div><!-- End Google Maps -->
 
       <div class="container" data-aos="fade">
@@ -904,14 +904,14 @@
           <div class="col-lg-4">
 
             <div class="info">
-              <h3>Get in touch</h3>
+              <h3>Entre em contato</h3>
               <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
 
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Localização:</h4>
+                  <p>Av. Joaquim Teotônio Segurado, s/n - Plano Diretor Sul, Palmas - TO, 77001-036</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -919,7 +919,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>restaurante@example.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -927,7 +927,7 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <p>+55 (63) 90000 0000</p>
                 </div>
               </div><!-- End Info Item -->
 
