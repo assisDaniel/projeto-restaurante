@@ -1,1 +1,1 @@
-from restaurante.views.views import IndexTemplateView
+from restaurante.views.IndexView import IndexTemplateView
