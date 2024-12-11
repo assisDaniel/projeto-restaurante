@@ -1,2 +1,3 @@
 from restaurante.admin.CardapioAdmin import CardapioAdmin
 from restaurante.admin.CategoriaAdmin import CategoriaAdmin
+from restaurante.admin.ReservaAdmin import ReservaAdmin

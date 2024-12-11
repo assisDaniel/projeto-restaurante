@@ -485,31 +485,33 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(static/img/reservation.jpg);"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form method="post" role="form" class="reserva-form">
               {% csrf_token %}
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" required="">
+                  {{form.nomeCompleto}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail" required="">
+                  {{form.email}}
+                  {{form.email.errors}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Seu Telefone" required="">
+                  {{form.telefone}}
+                  {{form.telefone.errors}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="date" name="date" class="form-control" id="date" placeholder="Data" required="">
+                  {{form.dataReserva}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="time" class="form-control" name="time" id="time" placeholder="Horário" required="">
+                  {{form.horaReserva}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="Nº de pessoas" required="">
+                  {{form.numPessoas}}
                 </div>
               </div>
 
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem"></textarea>
+                <textarea class="form-control" name="mensagem" id="message" rows="5" placeholder="Mensagem (informções adicionais, observações e etc)"></textarea>
               </div>
 
               <div class="text-center mt-3">
@@ -520,7 +522,6 @@
               </div>
             </form>
           </div><!-- End Reservation Form -->
-
         </div>
 
       </div>
@@ -842,7 +843,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="" method="post" role="form" class="reserva-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" required="">
